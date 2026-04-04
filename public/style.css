@@ -1,0 +1,19 @@
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 4px;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #facc15, #eab308);
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #fde047, #facc15);
+}

@@ -70,7 +70,7 @@
       <div class="flex gap-2 py-2.5 md:items-center justify-between">
 
         <!-- Left Side -->
-        <div class="flex flex-wrap items-center gap-x-6 gap-y-1 text-xs sm:text-sm">
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-1 text-xs">
           <a href="tel:+91934089870" class="inline-flex items-center gap-2 hover:text-brand-200">
             <span class="font-semibold">Call:</span>
             <span>+91 9340898870</span>
@@ -82,7 +82,7 @@
         </div>
 
         <!-- Right Side (Scrolling) -->
-        <div class="w-auto flex gap-3 md:gap-6">
+        <div class="w-auto flex gap-3 md:gap-6 text-sm">
           <i class="fa-brands fa-instagram"></i>
           <i class="fa-brands fa-facebook"></i>
           <i class="fa-brands fa-linkedin"></i>
@@ -102,17 +102,17 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-7 text-sm text-textPrimary font-medium">
-          <a class="hover:text-goldLight" href="/">HOME</a>
-          <a class="hover:text-goldLight" href="/about-us">ABOUT US</a>
+        <nav class="hidden lg:flex items-center gap-7 text-xs text-textPrimary font-medium">
+          <a class="hover:text-goldLight/90" href="/">HOME</a>
+          <a class="hover:text-goldLight/90" href="/about-us">ABOUT US</a>
 
           <div class="relative group">
 
             <!-- Button -->
-            <button class="inline-flex items-center gap-2 hover:text-goldLight">
-              SERVICES
+            <button class="inline-flex items-center gap-2 hover:text-goldLight/90">
+              <a href="/services/">SERVICES</a>
               <i data-lucide="chevron-down"
-                class="w-4 h-4 text-slate-400 transition-transform duration-300 group-hover:rotate-180">
+                class="w-4 h-4 text-textSecondary transition-transform duration-300 group-hover:rotate-180">
               </i>
             </button>
 
@@ -132,9 +132,9 @@
                 <div class="group/item relative">
 
                   <div
-                    class="flex justify-between items-center rounded-t-md px-4 py-2 text-sm cursor-pointer hover:bg-goldLight">
+                    class="flex justify-between items-center rounded-t-md px-4 py-2 cursor-pointer hover:bg-goldLight">
                     Transcripts & E-Transcripts
-                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-textSecondary"></i>
                   </div>
 
                   <!-- RIGHT PANEL -->
@@ -156,9 +156,9 @@
                 <!-- ITEM -->
                 <div class="group/item relative">
 
-                  <div class="flex justify-between items-center px-4 py-2 text-sm cursor-pointer hover:bg-goldLight">
+                  <div class="flex justify-between items-center px-4 py-2 cursor-pointer hover:bg-goldLight">
                     Academic Records
-                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-textSecondary"></i>
                   </div>
 
                   <!-- RIGHT PANEL -->
@@ -185,9 +185,9 @@
                 <!-- ITEM -->
                 <div class="group/item relative">
 
-                  <div class="flex justify-between items-center px-4 py-2 text-sm cursor-pointer hover:bg-goldLight">
+                  <div class="flex justify-between items-center px-4 py-2 cursor-pointer hover:bg-goldLight">
                     Apostille Attestation
-                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-textSecondary"></i>
                   </div>
 
                   <!-- RIGHT PANEL -->
@@ -209,12 +209,11 @@
                 </div>
 
                 <!-- SIMPLE ITEMS -->
-                <a href="/services/document-translation" class="block px-4 py-2 text-sm hover:bg-goldLight">Document
+                <a href="/services/document-translation" class="block px-4 py-2 hover:bg-goldLight">Document
                   Translation</a>
-                <a href="/services/GCMS-or-ATIP-notes" class="block px-4 py-2 text-sm hover:bg-goldLight">GCMS / ATIP
+                <a href="/services/GCMS-or-ATIP-notes" class="block px-4 py-2 hover:bg-goldLight">GCMS / ATIP
                   Notes</a>
-                <a href="/services/ECA-evaluation-support"
-                  class="block px-4 py-2 text-sm rounded-b-md hover:bg-goldLight">ECA
+                <a href="/services/ECA-evaluation-support" class="block px-4 py-2 rounded-b-md hover:bg-goldLight">ECA
                   Evaluation Support</a>
 
               </div>
@@ -225,14 +224,11 @@
           <div class="relative group">
 
             <!-- Button -->
-            <button type="button" class="inline-flex items-center gap-2 hover:text-goldLight">
-
-              UNIVERSITY
-
+            <button type="button" class="inline-flex items-center gap-2 hover:text-goldLight/90">
+              <a href="/university/">UNIVERSITY</a>
               <i data-lucide="chevron-down"
-                class="w-4 h-4 text-slate-400 transition-transform duration-300 group-hover:rotate-180">
+                class="w-4 h-4 text-textSecondary transition-transform duration-300 group-hover:rotate-180">
               </i>
-
             </button>
 
             <!-- Dropdown -->
@@ -241,33 +237,33 @@
            transition-all duration-300
            group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
 
-              <a href="/university/north-university" class="block px-3 py-2 text-sm hover:bg-goldLight">North
+              <a href="/university/north-university" class="block px-3 py-2 hover:bg-goldLight">North
                 University</a>
-              <a href="/university/south-university" class="block px-3 py-2 text-sm hover:bg-goldLight">South
+              <a href="/university/south-university" class="block px-3 py-2 hover:bg-goldLight">South
                 University</a>
-              <a href="/university/east-university" class="block px-3 py-2 text-sm hover:bg-goldLight">East
+              <a href="/university/east-university" class="block px-3 py-2 hover:bg-goldLight">East
                 University</a>
-              <a href="/university/west-university" class="block px-3 py-2 text-sm hover:bg-goldLight">West
+              <a href="/university/west-university" class="block px-3 py-2 hover:bg-goldLight">West
                 University</a>
-              <a href="/university/central-university" class="block px-3 py-2 text-sm hover:bg-goldLight">Central
+              <a href="/university/central-university" class="block px-3 py-2 hover:bg-goldLight">Central
                 University</a>
 
             </div>
 
           </div>
 
-          <a class="hover:text-goldLight" href="/blogs">BLOGS</a>
-          <a class="hover:text-goldLight" href="/faqs">FAQS</a>
+          <a class="hover:text-goldLight/90" href="/affiliates">AFFILIATES</a>
+          <a class="hover:text-goldLight/90" href="/blogs">BLOGS</a>
+          <a class="hover:text-goldLight/90" href="/faqs">FAQS</a>
         </nav>
 
         <div class="flex items-center gap-3">
           <a href="/contact"
-            class="hidden sm:inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm text-textPrimary bg-goldLight hover:bg-goldLight/90 group transition">
+            class="hidden sm:inline-flex items-center gap-2 rounded-full px-6 py-3 text-xs text-textPrimary bg-goldLight hover:bg-goldLight/90 group transition uppercase">
 
             Contact Us
 
-            <i data-lucide="arrow-right"
-              class="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1">
+            <i data-lucide="info" class="w-3.5 h-3.5 transform transition-transform duration-300 group-hover:scale-105">
             </i>
 
           </a>
@@ -287,7 +283,7 @@
       <div class="absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 ease-out" data-mobile-overlay
         data-mobile-close></div>
       <div
-        class="absolute right-0 top-0 h-full w-[74%] max-w-sm translate-x-full bg-white transition-transform duration-300 ease-out"
+        class="absolute right-0 top-0 h-screen w-[74%] max-w-sm translate-x-full bg-white transition-transform duration-300 ease-out"
         data-mobile-drawer>
         <div class="flex items-center justify-between border-b py-2.5 px-4">
           <div></div>
@@ -297,23 +293,25 @@
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
-        <div class="p-4">
-          <div class="grid gap-2 text-sm text-textPrimary font-medium">
-            <a class="rounded-xl px-3 py-2 hover:text-goldLight" href="/">HOME</a>
-            <a class="rounded-xl px-3 py-2 hover:text-goldLight" href="/about-us">ABOUT US</a>
+        <div class="h-[calc(100vh-140px)] overflow-y-auto scroll-smooth 
+[&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] p-4 flex flex-col justify-between">
+          <div class="grid gap-2 text-xs text-textPrimary font-medium">
+            <a class="rounded-xl px-3 py-2 hover:text-goldLight/90" href="/">HOME</a>
+            <a class="rounded-xl px-3 py-2 hover:text-goldLight/90" href="/about-us">ABOUT US</a>
 
             <!-- SERVICES -->
             <details class="group overflow-hidden transition-all duration-300">
 
               <!-- MAIN -->
               <summary
-                class="flex items-center justify-between cursor-pointer list-none px-3 py-2 hover:text-goldLight">
+                class="flex items-center justify-between cursor-pointer list-none px-3 py-2 hover:text-goldLight/90">
 
-                <span class="flex items-center gap-2">
+                <a href="/services/" class="flex items-center gap-2 hover:text-goldLight/90">
                   <i data-lucide="briefcase" class="w-4 h-4"></i> SERVICES
-                </span>
+                </a>
 
-                <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 group-open:rotate-180">
+                <i data-lucide="chevron-down"
+                  class="w-4 h-4 transition-transform duration-300 group-open:rotate-180 text-textSecondary">
                 </i>
               </summary>
 
@@ -326,7 +324,7 @@
                     class="flex items-center justify-between cursor-pointer px-3 py-2 hover:bg-goldLight text-textPrimary">
                     <span>Transcripts & E-Transcripts</span>
                     <i data-lucide="chevron-right"
-                      class="w-4 h-4 transition-transform duration-300 group-open:rotate-90">
+                      class="w-4 h-4 transition-transform duration-300 group-open:rotate-90 text-textSecondary">
                     </i>
                   </summary>
 
@@ -344,7 +342,7 @@
                     class="flex items-center justify-between cursor-pointer px-3 py-2 hover:bg-goldLight text-textPrimary">
                     <span>Academic Records</span>
                     <i data-lucide="chevron-right"
-                      class="w-4 h-4 transition-transform duration-300 group-open:rotate-90">
+                      class="w-4 h-4 transition-transform duration-300 group-open:rotate-90 text-textSecondary">
                     </i>
                   </summary>
 
@@ -368,7 +366,7 @@
                     class="flex items-center justify-between cursor-pointer px-3 py-2 hover:bg-goldLight text-textPrimary">
                     <span>Apostille Attestation</span>
                     <i data-lucide="chevron-right"
-                      class="w-4 h-4 transition-transform duration-300 group-open:rotate-90">
+                      class="w-4 h-4 transition-transform duration-300 group-open:rotate-90 text-textSecondary">
                     </i>
                   </summary>
 
@@ -406,12 +404,13 @@
             <details class="group overflow-hidden transition-all duration-300">
 
               <summary
-                class="flex items-center justify-between cursor-pointer list-none px-3 py-2 hover:text-goldLight">
-                <span class="flex items-center gap-2">
+                class="flex items-center justify-between cursor-pointer list-none px-3 py-2 hover:text-goldLight/90">
+                <a href="/university/" class="flex items-center gap-2">
                   <i data-lucide="graduation-cap" class="w-4 h-4"></i> UNIVERSITY
-                </span>
+                </a>
 
-                <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 group-open:rotate-180">
+                <i data-lucide="chevron-down"
+                  class="w-4 h-4 transition-transform duration-300 group-open:rotate-180 text-textSecondary">
                 </i>
               </summary>
 
@@ -434,26 +433,28 @@
               </div>
             </details>
 
-            <a class="rounded-xl px-3 py-2 hover:text-goldLight" href="/blogs">BLOGS</a>
-            <a class="rounded-xl px-3 py-2 hover:text-goldLight" href="/faqs">FAQS</a>
+            <a class="rounded-xl px-3 py-2 hover:text-goldLight/90" href="/affiliates">AFFILIATES</a>
+            <a class="rounded-xl px-3 py-2 hover:text-goldLight/90" href="/blogs">BLOGS</a>
+            <a class="rounded-xl px-3 py-2 hover:text-goldLight/90" href="/faqs">FAQS</a>
 
           </div>
+        </div>
+        <div class="flex items-center justify-between border-t p-4">
           <a href="/contact"
-            class="inline-flex mt-4 items-center gap-2 rounded-full px-4 py-2.5 text-sm text-textPrimary bg-goldLight hover:bg-goldLight/90 group transition">
+            class="inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-xs text-textPrimary bg-goldLight hover:bg-goldLight/90 group transition uppercase">
 
             Contact Us
 
-            <i data-lucide="arrow-right"
-              class="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1">
+            <i data-lucide="info" class="w-3.5 h-3.5 transform transition-transform duration-300 group-hover:scale-105">
             </i>
-
           </a>
         </div>
+
       </div>
     </div>
   </header>
 
-  <main>
+  <main class="bg-[url('/assets/images/bg.png')] bg-cover bg-center bg-fixed bg-white/95 bg-blend-lighten">
     <!-- Heading -->
     <section class="relative py-12 md:py-20 bg-slate-50 text-white">
 
@@ -473,15 +474,146 @@
     </section>
 
     <!-- Contact Us -->
-    <section>
+    <section class="py-12 md:py-20 mb-4 md:mb-0 px-4 w-full max-w-7xl mx-auto grid gap-10 md:grid-cols-2 items-center">
+      <img src="/assets/images/university.png" alt="Contact Us"
+        class="w-full h-full object-cover rounded-lg hidden md:block">
 
+      <form id="form" class="space-y-4 text-sm text-textPrimary">
+
+        <input name="name" placeholder="Name" class="w-full p-3 border rounded" required>
+
+        <input name="email" type="email" placeholder="Email" class="w-full p-3 border rounded" required>
+
+        <!-- Phone -->
+        <div class="flex gap-2">
+          <select name="countryCode" class="p-3 border rounded w-1/3">
+            <option value="+91">IN (+91)</option>
+            <option value="+1">US (+1)</option>
+            <option value="+44">UK (+44)</option>
+          </select>
+
+
+          <input name="phone" placeholder="Contact Number" class="w-full p-3 border rounded">
+        </div>
+
+        <!-- Service -->
+        <select name="service" class="w-full p-3 border rounded">
+          <option value="">Select Service</option>
+
+          <!-- Transcripts -->
+          <option>Marksheet Transcripts</option>
+          <option>e-Transcripts</option>
+
+          <!-- Academic Records -->
+          <option>Medium of Instruction</option>
+          <option>Migration Certificate</option>
+          <option>Convocation Certificate</option>
+          <option>Marksheet & Degree Certificate</option>
+
+          <!-- Apostille -->
+          <option>Apostille of Documents</option>
+          <option>Legalization of Educational & Commercial Documents</option>
+          <option>Embassy Attestation</option>
+
+          <!-- Other Services -->
+          <option>Document Translation</option>
+          <option>GCMS / ATIP Notes</option>
+          <option>ECA Evaluation Support</option>
+        </select>
+
+        <!-- <input name="university" placeholder="University" class="w-full p-3 border rounded"> -->
+
+        <select name="university" class="w-full p-3 border rounded">
+          <option value="">Select University</option>
+          <option>Delhi University</option>
+          <option>Mumbai University</option>
+          <option>Pune University</option>
+          <option>Anna University</option>
+          <option>JNTU</option>
+          <option>IGNOU</option>
+          <option>VTU</option>
+          <option>Osmania University</option>
+        </select>
+
+        <textarea name="message" placeholder="Message" rows="4" class="w-full p-3 border rounded"></textarea>
+
+        <!-- Disclaimer -->
+        <p class="text-red-500 text-sm">
+          *Disclaimer: We assist in procuring transcripts and academic documents...
+        </p>
+
+        <p class="text-xs text-textSecondary">
+          Providing your details authorizes us to contact you via Calls/SMS/E-mails.
+        </p>
+
+        <button type="submit" id="submit"
+          class="bg-primary/90 text-white px-6 py-3 rounded hover:bg-primary transition">
+          Submit Now
+        </button>
+
+        <p id="status" class="absolute px-1 text-sm text-textSecondary"></p>
+      </form>
     </section>
+
+    <script>
+      const form = document.getElementById("form");
+      const submit = document.getElementById("submit");
+      const status = document.getElementById("status");
+
+      const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxnxx8h8FI5SnqqUC6mg0eXsBR3Rg6b47B8jb2JOV3hcfxDMgl6NQvv5H179RyB4Mch/exec"
+
+      // PASTE YOUR SCRIPT URL
+      const scriptURL = WEB_APP_URL;
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        submit.innerText = "Submitting...";
+
+        const formData = new FormData(form);
+
+        const data = {
+          name: formData.get("name"),
+          email: formData.get("email"),
+          countryCode: formData.get("countryCode"),
+          phone: formData.get("phone"),
+          service: formData.get("service"),
+          university: formData.get("university"),
+          message: formData.get("message")
+        };
+
+        try {
+          const res = await fetch(scriptURL, {
+            method: "POST",
+            body: JSON.stringify(data)
+          });
+
+          const result = await res.json();
+
+          if (result.status === "success") {
+            status.innerText = "Submitted Successfully!";
+            submit.innerText = "Submitted";
+            form.reset();
+          } else {
+            status.innerText = "Failed to submit";
+            submit.innerText = "Submit Now";
+          }
+
+        } catch (err) {
+          status.innerText = "Error occurred";
+        } finally {
+          setTimeout(() => {
+            status.innerText = "";
+            submit.innerText = "Submit Now";
+          }, 4000);
+        }
+      });
+    </script>
   </main>
 
   <footer class="border-t border-slate-200 bg-white">
     <div class="mx-auto max-w-7xl px-4">
       <div class="grid gap-10 pt-12 pb-4 md:pb-12 lg:grid-cols-[1.05fr_2fr]">
-        <div class="space-y-7">
+        <div class="space-y-6">
           <div>
             <img src="/assets/logo.png" alt="Worldwide Transcripts" class="h-14 md:h-20 w-auto" />
             <p class="mt-6 max-w-md text-sm leading-7 text-textSecondary">
@@ -523,7 +655,7 @@
         <div class="space-y-10">
           <div class="grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
             <div>
-              <h3 class="border-b pb-3 text-xl text-textPrimary">Quick Links</h3>
+              <h3 class="border-b pb-3 text-textPrimary">Quick Links</h3>
               <div class="mt-5 grid gap-3 text-sm text-textSecondary">
                 <a href="/about-us" class="transition hover:text-primaryLight">About</a>
                 <a href="/services" class="transition hover:text-primaryLight">Services</a>
@@ -535,7 +667,7 @@
             </div>
 
             <div>
-              <h3 class="border-b pb-3 text-xl text-textPrimary">Services</h3>
+              <h3 class="border-b pb-3 text-textPrimary">Services</h3>
               <div class="mt-5 grid gap-3 text-sm text-textSecondary">
                 <a href="/services/academic-transcripts" class="transition hover:text-primaryLight">Academic
                   Transcripts</a>
@@ -552,7 +684,7 @@
             </div>
 
             <div>
-              <h3 class="border-b pb-3 text-xl text-textPrimary">Other Links</h3>
+              <h3 class="border-b pb-3 text-textPrimary">Other Links</h3>
               <div class="mt-5 grid gap-3 text-sm text-textSecondary">
                 <a href="/user-agreement" class="transition hover:text-primaryLight">User Agreement</a>
                 <a href="/privacy-policy" class="transition hover:text-primaryLight">Privacy Policy</a>
@@ -560,12 +692,12 @@
             </div>
 
             <div>
-              <h3 class="border-b pb-3 text-xl text-textPrimary">Opening Time</h3>
+              <h3 class="border-b pb-3 text-textPrimary">Opening Time</h3>
               <div class="mt-5 space-y-4 text-sm text-textSecondary">
                 <p>Working Hours - 24x7</p>
                 <div>
                   <div class="font-semibold text-primaryLight">Visiting Hours</div>
-                  <div class="mt-3 space-y-2 text-textSecondary">
+                  <div class="mt-3 space-y-2 text-textSecondary text-nowrap">
                     <p>Monday to Friday : 9:30AM - 6:00PM</p>
                     <p>Saturday : 9:30AM - 4:30PM</p>
                   </div>
@@ -576,7 +708,7 @@
 
           <div class="grid gap-8 md:border-t-2 border-dashed md:pt-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <h3 class="border-b pb-3 text-xl text-textPrimary">Our Serving Countries</h3>
+              <h3 class="border-b pb-3 text-textPrimary">Our Serving Countries</h3>
               <div class="mt-6 flex flex-wrap gap-3">
                 <span class="rounded-full bg-goldLight px-5 py-2 text-sm font-medium text-white">India</span>
                 <span class="rounded-full bg-slate-50 px-5 py-2 text-sm font-medium text-textSecondary">US</span>
@@ -590,20 +722,20 @@
                   East</span>
                 <span class="rounded-full bg-slate-50 px-5 py-2 text-sm font-medium text-textSecondary">North
                   America</span>
-                <span class="rounded-full bg-slate-50 px-5 py-2 text-sm font-medium text-slate-800">Africa</span>
+                <span class="rounded-full bg-slate-50 px-5 py-2 text-sm font-medium text-textSecondary">Africa</span>
               </div>
             </div>
 
             <div>
-              <h3 class="border-b pb-3 text-xl text-textPrimary">Our Certification</h3>
-              <div class="mt-2 md:mt-6 grid grid-cols-4 gap-2">
+              <h3 class="border-b pb-3 text-textPrimary">Our Certification</h3>
+              <div class="mt-2 md:mt-6 grid grid-cols-4 gap-4 md:gap-6">
                 <img src="/assets/images/certificates/iso_9001.png" alt="ISO 9001 Certificate"
                   class="h-20 object-contain">
-                <img src="/assets/images/certificates/iso_9001_2015.png" alt="ISO 9001 Certificate"
+                <img src="/assets/images/certificates/iso_9001_2015.png" alt="ISO 9001 2015 Certificate"
                   class="h-20 object-contain">
-                <img src="/assets/images/certificates/iso_9001.png" alt="ISO 9001 Certificate"
+                <img src="/assets/images/certificates/iso_27701.png" alt="ISO 27701 Certificate"
                   class="h-20 object-contain">
-                <img src="/assets/images/certificates/iso_9001.png" alt="ISO 9001 Certificate"
+                <img src="/assets/images/certificates/iso_27701_2019.png" alt="ISO 27701 2019 Certificate"
                   class="h-20 object-contain">
 
               </div>
@@ -620,27 +752,32 @@
 
         <div class="flex items-center justify-center gap-5 text-textSecondary">
 
-          <a href="#" class="transition hover:text-pink-600 hover:scale-110">
+          <a href="https://www.instagram.com/trudocsglobal" target="_blank"
+            class="transition hover:text-pink-600 hover:scale-110">
             <i class="fab fa-instagram text-base"></i>
           </a>
 
-          <a href="#" class="transition hover:text-blue-400 hover:scale-110">
+          <a href="https://twitter.com/trudocsglobal" target="_blank"
+            class="transition hover:text-blue-400 hover:scale-110">
             <i class="fab fa-twitter text-base"></i>
           </a>
 
-          <a href="#" class="transition hover:text-blue-600 hover:scale-110">
+          <a href="https://www.facebook.com/trudocsglobal" target="_blank"
+            class="transition hover:text-blue-600 hover:scale-110">
             <i class="fab fa-facebook-f text-base"></i>
           </a>
 
-          <a href="#" class="transition hover:text-red-600 hover:scale-110">
+          <a href="https://www.youtube.com/trudocsglobal" target="_blank"
+            class="transition hover:text-red-600 hover:scale-110">
             <i class="fab fa-youtube text-base"></i>
           </a>
 
-          <a href="#" class="transition hover:text-blue-700 hover:scale-110">
+          <a href="https://www.linkedin.com/company/trudocsglobal" target="_blank"
+            class="transition hover:text-blue-700 hover:scale-110">
             <i class="fab fa-linkedin-in text-base"></i>
           </a>
 
-          <a href="#" class="transition hover:text-textPrimary hover:scale-110">
+          <a href="/contact" class="transition hover:text-textPrimary hover:scale-110">
             <i class="fas fa-info-circle text-base"></i>
           </a>
 
