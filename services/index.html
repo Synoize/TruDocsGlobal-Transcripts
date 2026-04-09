@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/public/style.css">
   <script>
     tailwind.config = {
       theme: {
@@ -178,7 +179,8 @@
                       Certificate</a>
                     <a href="/services/marksheet-degree-certificate"
                       class="block px-4 py-2 hover:bg-goldLight">Marksheet & Degree Certificate</a>
-
+                    <a href="/services/duplicate-marksheet" class="block px-4 py-2 hover:bg-goldLight">Duplicate
+                      Marksheet</a>
                   </div>
                 </div>
 
@@ -225,7 +227,7 @@
 
             <!-- Button -->
             <button type="button" class="inline-flex items-center gap-2 hover:text-goldLight/90">
-              <a href="/university/"></a>UNIVERSITY</a>
+              <a href="/university/">UNIVERSITY</a>
               <i data-lucide="chevron-down"
                 class="w-4 h-4 text-textSecondary transition-transform duration-300 group-hover:rotate-180">
               </i>
@@ -358,6 +360,9 @@
                   <a href="/services/marksheet-degree-certificate" class="block pl-8 pr-3 py-2 hover:bg-goldLight">
                     Marksheet & Degree Certificate
                   </a>
+                  <a href="/services/duplicate-marksheet" class="block pl-8 pr-3 py-2 hover:bg-goldLight">
+                    Duplicate Marksheet
+                  </a>
                 </details>
 
                 <!-- APOSTILLE -->
@@ -454,7 +459,7 @@
     </div>
   </header>
 
-  <main class="bg-[url('/assets/images/bg.png')] bg-cover bg-center bg-fixed bg-white/95 bg-blend-lighten">
+  <main class="bg-[url('/assets/main_bg.png')] bg-cover bg-center bg-fixed bg-white/90 bg-blend-lighten">
     <!-- Heading -->
     <section class="relative py-12 md:py-20 bg-slate-50 text-white">
 
@@ -785,7 +790,8 @@
         <!-- Tabs -->
         <div class="grid md:grid-cols-4 text-textPrimary">
 
-          <button class="tab-btn active flex items-center justify-center gap-2 py-4 font-medium bg-primary text-sm"
+          <button
+            class="tab-btn active flex items-center justify-center gap-2 py-4 font-medium bg-primary text-white text-sm"
             data-tab="tab1">
             Client First, Always
           </button>
@@ -808,23 +814,39 @@
         </div>
 
         <!-- Content -->
-        <div class="bg-slate-50 p-6 md:p-8 text-center text-sm md:text-base text-textSecondary">
+        <div class="bg-slate-50 p-6 md:p-8 text-center text-sm md:text-base text-textSecondary leading-relaxed">
 
           <p class="tab-content" id="tab1">
-            It’s all about our customers. We start by truly understanding your needs so we can craft a solution that
-            suits your requirements.
+            Everything we do begins with you. We take the time to understand your exact requirements, deadlines, and
+            concerns
+            before offering a solution. Our goal is not just to deliver a service, but to provide a smooth, stress-free
+            experience
+            that saves your time and eliminates confusion. Your success and satisfaction remain our top priority at
+            every step.
           </p>
 
           <p class="tab-content hidden" id="tab2">
-            We constantly innovate and improve our processes to deliver faster, smarter, and more efficient solutions.
+            We believe in constantly pushing boundaries. By leveraging modern tools, streamlined workflows, and smart
+            automation,
+            we ensure faster turnaround times and greater accuracy. Our team is always exploring better ways to simplify
+            complex
+            processes, so you get efficient and reliable solutions without unnecessary delays.
           </p>
 
           <p class="tab-content hidden" id="tab3">
-            We adapt to changing requirements and evolve continuously to meet modern challenges in document services.
+            In a rapidly changing world, flexibility is key. We stay updated with evolving university procedures,
+            embassy requirements,
+            and documentation standards. This allows us to adapt quickly and guide you through any changes, ensuring
+            your process
+            continues smoothly without setbacks or surprises.
           </p>
 
           <p class="tab-content hidden" id="tab4">
-            Integrity is at the heart of everything we do, ensuring transparency, trust, and reliability in every step.
+            Trust is the foundation of our work. We maintain complete transparency in our processes, pricing, and
+            communication.
+            Every document is handled with the highest level of care and confidentiality. With us, you can be assured of
+            honest
+            guidance, reliable service, and a commitment to doing what’s right—always.
           </p>
 
         </div>
@@ -841,7 +863,7 @@
 
           // Reset all tabs
           tabs.forEach(t => {
-            t.classList.remove("active", "bg-primary");
+            t.classList.remove("active", "bg-primary", "text-white");
             t.classList.add("bg-primaryLight");
           });
 
@@ -849,7 +871,7 @@
           contents.forEach(c => c.classList.add("hidden"));
 
           // Activate clicked tab
-          tab.classList.add("bg-primary");
+          tab.classList.add("bg-primary", "text-white");
           tab.classList.remove("bg-primaryLight");
 
           // Show content
@@ -870,145 +892,93 @@
       </div>
 
       <!-- Slider -->
-      <div class="px-4 max-w-7xl mx-auto relative overflow-hidden  ">
+      <div class="px-4 max-w-7xl mx-auto relative overflow-hidden">
 
         <!-- Track -->
         <div id="testimonialTrack1" class="flex transition-transform duration-700 ease-in-out gap-4 mx-4">
 
           <!-- CARD 1 -->
           <div class="min-w-full md:min-w-[33.33%] bg-white rounded-2xl shadow-lg p-6 pb-12 relative">
+            <div class="absolute top-4 right-4 text-goldLight text-lg">★ ★ ★ ★ ★</div>
 
-            <!-- Stars -->
-            <div class="absolute top-4 right-4 text-goldLight text-lg">
-              ★ ★ ★ ★ ★
-            </div>
-
-            <!-- Profile -->
             <div class="flex items-center gap-4 mb-4">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
-                class="w-14 h-14 rounded-full object-cover" />
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-14 h-14 rounded-full object-cover" />
               <div class="flex flex-col items-start">
-                <h3 class="text-sm font-semibold text-textPrimary">Dawa Dee</h3>
-                <p class="text-xs text-textSecondary">Toronto, Canada</p>
+                <h3 class="text-sm font-semibold text-textPrimary">Alex Morgan</h3>
+                <p class="text-xs text-textSecondary">New York, USA</p>
               </div>
             </div>
 
-            <!-- Testimonial Text -->
             <p class="text-textSecondary leading-relaxed text-xs">
-              The team patiently addressed all my questions, walked me through their process,
-              and went above and beyond to sort out my old documents. The combination of their
-              attention to detail, speed, and incredible customer support makes WWT Services
-              stand out from the competition. I highly recommend them to anyone looking for a
-              reliable and stress-free transcription service and will certainly use them again.
+              Absolutely impressed with the professionalism and efficiency of the team.
+              They handled my documentation seamlessly and ensured everything was completed
+              on time. The communication throughout the process was clear and reassuring.
             </p>
 
-            <!-- Quote Icon -->
-            <div class="absolute -bottom-14 left-4 text-goldLight text-9xl opacity-20">
-              “
-            </div>
-
+            <div class="absolute -bottom-14 left-4 text-goldLight text-9xl opacity-20">“</div>
           </div>
 
-          <!-- CARD 1 -->
+          <!-- CARD 2 -->
           <div class="min-w-full md:min-w-[33.33%] bg-white rounded-2xl shadow-lg p-6 pb-12 relative">
+            <div class="absolute top-4 right-4 text-goldLight text-lg">★ ★ ★ ★ ★</div>
 
-            <!-- Stars -->
-            <div class="absolute top-4 right-4 text-goldLight text-lg">
-              ★ ★ ★ ★ ★
-            </div>
-
-            <!-- Profile -->
             <div class="flex items-center gap-4 mb-4">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
-                class="w-14 h-14 rounded-full object-cover" />
+              <img src="https://randomuser.me/api/portraits/women/65.jpg" class="w-14 h-14 rounded-full object-cover" />
               <div class="flex flex-col items-start">
-                <h3 class="text-sm font-semibold text-textPrimary">Dawa Dee</h3>
-                <p class="text-xs text-textSecondary">Toronto, Canada</p>
+                <h3 class="text-sm font-semibold text-textPrimary">Sophie Laurent</h3>
+                <p class="text-xs text-textSecondary">Paris, France</p>
               </div>
             </div>
 
-            <!-- Testimonial Text -->
             <p class="text-textSecondary leading-relaxed text-xs">
-              The team patiently addressed all my questions, walked me through their process,
-              and went above and beyond to sort out my old documents. The combination of their
-              attention to detail, speed, and incredible customer support makes WWT Services
-              stand out from the competition. I highly recommend them to anyone looking for a
-              reliable and stress-free transcription service and will certainly use them again.
+              I had an amazing experience working with this team. They were incredibly
+              responsive and paid attention to every small detail. It made the entire
+              process smooth and stress-free for me.
             </p>
 
-            <!-- Quote Icon -->
-            <div class="absolute -bottom-14 left-4 text-goldLight text-9xl opacity-20">
-              “
-            </div>
-
+            <div class="absolute -bottom-14 left-4 text-goldLight text-9xl opacity-20">“</div>
           </div>
 
-          <!-- CARD 1 -->
+          <!-- CARD 3 -->
           <div class="min-w-full md:min-w-[33.33%] bg-white rounded-2xl shadow-lg p-6 pb-12 relative">
+            <div class="absolute top-4 right-4 text-goldLight text-lg">★ ★ ★ ★ ★</div>
 
-            <!-- Stars -->
-            <div class="absolute top-4 right-4 text-goldLight text-lg">
-              ★ ★ ★ ★ ★
-            </div>
-
-            <!-- Profile -->
             <div class="flex items-center gap-4 mb-4">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
-                class="w-14 h-14 rounded-full object-cover" />
+              <img src="https://randomuser.me/api/portraits/men/76.jpg" class="w-14 h-14 rounded-full object-cover" />
               <div class="flex flex-col items-start">
-                <h3 class="text-sm font-semibold text-textPrimary">Dawa Dee</h3>
-                <p class="text-xs text-textSecondary">Toronto, Canada</p>
+                <h3 class="text-sm font-semibold text-textPrimary">Liam O’Connor</h3>
+                <p class="text-xs text-textSecondary">Dublin, Ireland</p>
               </div>
             </div>
 
-            <!-- Testimonial Text -->
             <p class="text-textSecondary leading-relaxed text-xs">
-              The team patiently addressed all my questions, walked me through their process,
-              and went above and beyond to sort out my old documents. The combination of their
-              attention to detail, speed, and incredible customer support makes WWT Services
-              stand out from the competition. I highly recommend them to anyone looking for a
-              reliable and stress-free transcription service and will certainly use them again.
+              Their service exceeded my expectations. Fast turnaround, accurate work,
+              and very friendly support. I’ll definitely be using their services again
+              in the future.
             </p>
 
-            <!-- Quote Icon -->
-            <div class="absolute -bottom-14 left-4 text-goldLight text-9xl opacity-20">
-              “
-            </div>
-
+            <div class="absolute -bottom-14 left-4 text-goldLight text-9xl opacity-20">“</div>
           </div>
 
-          <!-- CARD 1 -->
+          <!-- CARD 4 -->
           <div class="min-w-full md:min-w-[33.33%] bg-white rounded-2xl shadow-lg p-6 pb-12 relative">
+            <div class="absolute top-4 right-4 text-goldLight text-lg">★ ★ ★ ★ ★</div>
 
-            <!-- Stars -->
-            <div class="absolute top-4 right-4 text-goldLight text-lg">
-              ★ ★ ★ ★ ★
-            </div>
-
-            <!-- Profile -->
             <div class="flex items-center gap-4 mb-4">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
-                class="w-14 h-14 rounded-full object-cover" />
+              <img src="https://randomuser.me/api/portraits/women/12.jpg" class="w-14 h-14 rounded-full object-cover" />
               <div class="flex flex-col items-start">
-                <h3 class="text-sm font-semibold text-textPrimary">Dawa Dee</h3>
-                <p class="text-xs text-textSecondary">Toronto, Canada</p>
+                <h3 class="text-sm font-semibold text-textPrimary">Maya Kapoor</h3>
+                <p class="text-xs text-textSecondary">Mumbai, India</p>
               </div>
             </div>
 
-            <!-- Testimonial Text -->
             <p class="text-textSecondary leading-relaxed text-xs">
-              The team patiently addressed all my questions, walked me through their process,
-              and went above and beyond to sort out my old documents. The combination of their
-              attention to detail, speed, and incredible customer support makes WWT Services
-              stand out from the competition. I highly recommend them to anyone looking for a
-              reliable and stress-free transcription service and will certainly use them again.
+              From start to finish, everything was handled perfectly. The team was
+              supportive, quick, and extremely professional. Highly recommended for
+              anyone looking for reliable services.
             </p>
 
-            <!-- Quote Icon -->
-            <div class="absolute -bottom-14 left-4 text-goldLight text-9xl opacity-20">
-              “
-            </div>
-
+            <div class="absolute -bottom-14 left-4 text-goldLight text-9xl opacity-20">“</div>
           </div>
 
         </div>
@@ -1118,6 +1088,86 @@
 
   </main>
 
+ <!-- Live Activity -->
+  <div class="relative px-4 md:px-20">
+
+    <p id="live-activity" class="fixed left-1/2 -translate-x-1/2 bottom-6 z-50 
+           flex items-center gap-2
+           py-2 px-5 rounded-full 
+           bg-white/80 backdrop-blur-xl 
+           shadow-lg border 
+           text-xs text-textPrimary font-semibold 
+           opacity-0 translate-y-5 
+           transition-all duration-500">
+
+      <!-- Green blinking dot -->
+      <span class="relative flex h-2  w-2 ">
+        <span class="absolute inline-flex h-full w-full rounded-full bg-green-500 animate-ping"></span>
+        <span class="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+      </span>
+
+      <!-- Text -->
+      <span id="live-text" class="text-nowrap"></span>
+
+    </p>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const el = document.getElementById("live-activity");
+      const textEl = document.getElementById("live-text");
+
+      if (!el || !textEl) return;
+
+      const messages = [
+        () => `${rand(1200, 2500)}+ transcripts processed successfully`,
+        () => `${rand(5, 25)} students requested documents today`,
+        () => `${rand(1, 10)} applications submitted in last hour`,
+        () => `Documents delivered to ${rand(3, 12)} countries this week`,
+        () => `${rand(20, 60)} verifications completed today`,
+        () => `${rand(2, 15)} transcript requests in progress`,
+        () => `100% secure & confidential handling`,
+        () => `Avg processing time: ${rand(7, 15)} days`
+      ];
+
+      function rand(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function showMessage() {
+        const msg = messages[Math.floor(Math.random() * messages.length)];
+        textEl.innerHTML = msg();
+
+        // show
+        el.classList.remove("opacity-0", "translate-y-5");
+        el.classList.add("opacity-100", "translate-y-0");
+
+        // hide after 3s
+        setTimeout(() => {
+          el.classList.remove("opacity-100", "translate-y-0");
+          el.classList.add("opacity-0", "translate-y-5");
+        }, 3000);
+      }
+
+      showMessage();
+      setInterval(showMessage, 5000);
+
+    });
+  </script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/1234567890" target="_blank"
+    class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition duration-300">
+
+    <!-- WhatsApp Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path
+        d="M20.52 3.48A11.86 11.86 0 0012.06 0C5.46 0 .1 5.36.1 11.96c0 2.11.55 4.17 1.6 6L0 24l6.2-1.63a11.86 11.86 0 005.86 1.5h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.2-1.25-6.2-3.51-8.43zM12.07 21.5h-.01a9.44 9.44 0 01-4.8-1.3l-.35-.2-3.68.97.98-3.59-.23-.37a9.45 9.45 0 01-1.46-5.05c0-5.23 4.25-9.48 9.49-9.48 2.53 0 4.9.99 6.69 2.78a9.39 9.39 0 012.78 6.7c0 5.23-4.25 9.48-9.49 9.48zm5.23-7.13c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.73.94-.89 1.13-.16.19-.32.21-.61.07-.29-.14-1.23-.45-2.35-1.43-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.45.13-.6.13-.13.29-.32.43-.48.14-.16.19-.27.29-.45.1-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.48-.16-.01-.35-.01-.54-.01-.19 0-.49.07-.75.35-.26.29-1 1-1 2.44s1.02 2.83 1.16 3.03c.14.19 2 3.06 4.85 4.29.68.29 1.21.46 1.63.59.68.22 1.3.19 1.79.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33z" />
+    </svg>
+  </a>
+
   <footer class="border-t border-slate-200 bg-white">
     <div class="mx-auto max-w-7xl px-4">
       <div class="grid gap-10 pt-12 pb-4 md:pb-12 lg:grid-cols-[1.05fr_2fr]">
@@ -1152,10 +1202,10 @@
               <span class="text-sm font-medium text-white/90">International</span>
             </div>
             <div class="px-5 py-5 text-sm leading-8 text-textSecondary">
-              <p class="text-textPrimary text-lg mb-2">TruDocsGlobal - Transcripts</p>
-              <p>Ward No. 28, E/141, 1st Floor, Sec-1,</p>
-              <p>Avanti Vihar, Raipur,</p>
-              <p>Chhattisgarh - 492001</p>
+              <p class="text-textPrimary text-lg mb-2">TruDocsGlobal Private Limited</p>
+              <p>B-17 Platinum, Ashoka Ratan</p>
+              <p>Shankar Nagar, Raipur,</p>
+              <p>Chhattisgarh - 492006</p>
             </div>
           </div>
         </div>

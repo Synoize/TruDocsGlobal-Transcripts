@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>university - TruDocsGlobal</title>
+  <title>University - TruDocsGlobal</title>
   <link rel="icon" href="/public/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/public/style.css">
   <script>
     tailwind.config = {
       theme: {
@@ -178,6 +179,8 @@
                       Certificate</a>
                     <a href="/services/marksheet-degree-certificate"
                       class="block px-4 py-2 hover:bg-goldLight">Marksheet & Degree Certificate</a>
+                    <a href="/services/duplicate-marksheet" class="block px-4 py-2 hover:bg-goldLight">Duplicate
+                      Marksheet</a>
 
                   </div>
                 </div>
@@ -358,6 +361,9 @@
                   <a href="/services/marksheet-degree-certificate" class="block pl-8 pr-3 py-2 hover:bg-goldLight">
                     Marksheet & Degree Certificate
                   </a>
+                  <a href="/services/duplicate-marksheet" class="block pl-8 pr-3 py-2 hover:bg-goldLight">
+                    Duplicate Marksheet
+                  </a>
                 </details>
 
                 <!-- APOSTILLE -->
@@ -453,7 +459,7 @@
     </div>
   </header>
 
-  <main class="bg-[url('/assets/images/bg.png')] bg-cover bg-center bg-fixed bg-white/95 bg-blend-lighten">
+  <main class="bg-[url('/assets/main_bg.png')] bg-cover bg-center bg-fixed bg-white/90 bg-blend-lighten">
     <!-- HERO SECTION -->
     <section class="relative py-12 md:py-20 bg-slate-50 text-white">
 
@@ -475,8 +481,196 @@
       </div>
     </section>
 
+    <!-- All University Area Wise -->
+    <section class="max-w-7xl mx-auto px-4 py-12 md:py-20">
+
+      <div class="mb-10 w-full max-w-xl mx-auto">
+        <p class="text-orange-500 text-sm text-center uppercase tracking-widest">
+          Explore by Region
+        </p>
+
+        <h2 class="mt-2 text-3xl md:text-4xl text-center text-textPrimary leading-tight md:leading-snug">
+          Find Your University
+        </h2>
+
+        <!-- SEARCH -->
+        <input id="searchInput" type="text" placeholder="Search university..."
+          class="mt-8 w-full px-5 py-3 text-sm rounded-xl border outline-none focus:border-gray-300">
+      </div>
+
+      <!-- CONTENT -->
+      <div id="universityContainer" class="space-y-14"></div>
+
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+
+        const data = {
+          "North University": [
+            {
+              name: "Indira Gandhi National Open University",
+              img: "/assets/images/universities/north/ignou.png",
+              link: "/universities/ignou"
+            },
+            {
+              name: "Maharshi Dayanand University",
+              img: "/assets/images/universities/north/mdu.png",
+              link: "/universities/mdu"
+            },
+            {
+              name: "Guru Jambheshwar University",
+              img: "/assets/images/universities/north/gju.png",
+              link: "/universities/gju"
+            },
+            {
+              name: "University of Delhi",
+              img: "/assets/images/universities/north/du.png",
+              link: "/universities/delhi"
+            },
+            {
+              name: "Panjab University",
+              img: "/assets/images/universities/north/pu.png",
+              link: "/universities/panjab"
+            },
+            {
+              name: "Banaras Hindu University", img: "/assets/images/universities/north/bhu.png", link: "/universities/bhu"
+            }
+          ],
+
+          "Central University": [
+            {
+              name: "Devi Ahilya Vishwavidyalaya", img: "/assets/images/universities/central/davv.png", link: "/universities/davv"
+
+            },
+            {
+              name: "Barkatullah University", img: "/assets/images/universities/central/Barkatullah.png", link: "/universities/bu"
+
+            },
+            {
+              name: "Vikram University", img: "/assets/images/universities/vikram.png", link: "/universities/vikram"
+            },
+            {
+              name: "Rani Durgavati University", img: "/assets/images/universities/rdu.png", link: "/universities/rdu"
+
+            }
+          ],
+
+          "East University": [
+            {
+              name: "University of Calcutta", img: "/assets/images/universities/calcutta.png", link: "/universities/calcutta"
+            },
+            {
+              name: "Jadavpur University", img: "/assets/images/universities/jadavpur.png", link: "/universities/jadavpur"
+            },
+            {
+              name: "Utkal University", img: "/assets/images/universities/utkal.png", link: "/universities/utkal"
+            },
+            {
+              name: "Ravenshaw University", img: "/assets/images/universities/ravenshaw.png", link: "/universities/ravenshaw"
+            }
+          ],
+
+          "West University": [
+            {
+              name: "University of Mumbai", img: "/assets/images/universities/west/mu.png", link: "/universities/davv"
+            },
+
+          ],
+
+          "South University": [
+            {
+              name: "Devi Ahilya Vishwavidyalaya", img: "/assets/images/universities/south/davv.png", link: "/universities/davv"
+            },
+
+          ],
+        };
+
+        const container = document.getElementById("universityContainer");
+        const searchInput = document.getElementById("searchInput");
+
+        if (!container || !searchInput) {
+          console.error("Container or SearchInput not found");
+          return;
+        }
+
+        function render(searchText = "") {
+          container.innerHTML = "";
+          let hasResults = false;
+
+          Object.keys(data).forEach(category => {
+
+            const filtered = data[category].filter(u =>
+              u.name.toLowerCase().includes(searchText.toLowerCase())
+            );
+
+            if (filtered.length === 0) return;
+
+            hasResults = true;
+
+            let cards = "";
+
+            filtered.forEach(u => {
+              cards += `
+          <a href="${u.link}"
+            class="group bg-white rounded-xl p-3 text-center shadow hover:shadow-md transition block">
+
+            <img src="${u.img}"
+              class="h-16 mx-auto object-contain mb-2"
+              onerror="this.style.display='none'">
+
+            <p class="text-xs text-gray-700">
+              ${u.name}
+            </p>
+
+            <div class="mt-2 bg-goldLight text-xs px-3 py-1 rounded-md inline-block">
+              View Details
+            </div>  
+
+          </a>
+        `;
+            });
+
+            const section = document.createElement("div");
+
+            section.innerHTML = `
+        <h2 class="text-center text-2xl font-semibold mb-6 text-textPrimary">
+          ${category}
+        </h2>
+
+        <div class="bg-primaryLight p-6 rounded-2xl">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            ${cards}
+          </div>
+        </div>
+      `;
+
+            container.appendChild(section);
+          });
+
+          // no results
+          if (!hasResults) {
+            container.innerHTML = `
+        <div class="text-center py-16">
+          <h3 class="text-lg font-semibold">No University Found</h3>
+          <p class="text-sm text-gray-500 mt-2">Try another search</p>
+        </div>
+      `;
+          }
+        }
+
+        // IMPORTANT
+        render("");
+
+        searchInput.addEventListener("input", function (e) {
+          render(e.target.value);
+        });
+
+      });
+    </script>
+
     <!-- STATS -->
-    <section class="px-4 py-12 md:py-20 max-w-4xl mx-auto text-center">
+    <section class="px-4 max-w-4xl mx-auto text-center">
 
       <p class="text-orange-500 text-sm uppercase tracking-widest">
         CREDIBILITY INDEX
@@ -516,13 +710,13 @@
       </div>
     </section>
 
-    <!-- UNIVERSITIES -->
-    <section class="max-w-7xl mx-auto px-4">
+    <!-- Banner All UNIVERSITIES -->
+    <section class="max-w-7xl mx-auto px-4 py-12 md:py-20 ">
 
       <div class="relative rounded-2xl overflow-hidden">
 
         <!-- BG -->
-        <div class="absolute inset-0 bg-[url('./assets/images/universities/bg.png')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-[url('/assets/main_bg.png')] bg-cover brightness-75">
         </div>
 
         <!-- Overlay -->
@@ -544,64 +738,56 @@
         [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
 
             <!-- CARD -->
-            <div class="min-w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center ml-4">
-              <img src="/assets/images/universities/ignou.png" class="h-24 mx-auto">
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center ml-4">
+              <img src="/assets/images/universities/north/ignou.png" class="h-20 mx-auto object-contain">
               <p class="text-xs text-textPrimary mt-3">IGNOU</p>
             </div>
 
-            <div class="min-w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center">
-              <img src="/assets/images/universities/du.png" class="h-24 mx-auto">
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/north/pu.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">Panjab University</p>
+            </div>
+
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/north/bhu.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">BHU, Varanasi</p>
+            </div>
+
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/central/barkatullah.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">Barkatullah University, Bhopal</p>
+            </div>
+
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/north/jivaji.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">Jiwaji University, Gwalior</p>
+            </div>
+
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/north/mdu.png" class="h-20 mx-auto object-contain">
               <p class="text-xs text-textPrimary mt-3">Maharshi Dayanand University</p>
             </div>
 
-            <div class="min-w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center">
-              <img src="/assets/images/universities/ignou.png" class="h-24 mx-auto">
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/north/gju.png" class="h-20 mx-auto object-contain">
               <p class="text-xs text-textPrimary mt-3">Guru Jambheshwar University</p>
             </div>
 
-            <div class="min-w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center">
-              <img src="/assets/images/universities/du.png" class="h-24 mx-auto">
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/west/mu.png" class="h-20 mx-auto object-contain">
               <p class="text-xs text-textPrimary mt-3">University of Mumbai</p>
             </div>
 
-            <div class="min-w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center">
-              <img src="/assets/images/universities/ignou.png" class="h-24 mx-auto">
-              <p class="text-xs text-textPrimary mt-3">DAV University</p>
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/central/davv.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">DAVV, Indore</p>
             </div>
 
-            <div class="min-w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center">
-              <img src="/assets/images/universities/du.png" class="h-24 mx-auto">
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm mr-4">
+              <img src="/assets/images/universities/north/du.png" class="h-20 mx-auto object-contain">
               <p class="text-xs text-textPrimary mt-3">University of Delhi</p>
             </div>
 
-            <div class="min-w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center">
-              <img src="/assets/images/universities/ignou.png" class="h-24 mx-auto">
-              <p class="text-xs text-textPrimary mt-3">Anna University</p>
-            </div>
-
-            <div class="min-w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center">
-              <img src="/assets/images/universities/du.png" class="h-24 mx-auto">
-              <p class="text-xs text-textPrimary mt-3">Savitribai Phule Pune University</p>
-            </div>
-
-            <div class="min-w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center mr-4">
-              <img src="/assets/images/universities/ignou.png" class="h-24 mx-auto">
-              <p class="text-xs text-textPrimary mt-3">Rajasthan Technical University</p>
-            </div>
-
-          </div>
-
-          <div class="w-full mt-10 flex justify-center">
-            <!-- BUTTON -->
-            <a href="./university">
-              <button class="group bg-goldLight text-white text-sm px-6 py-3 rounded-full 
-  hover:bg-goldLight/90 transition-all duration-300 flex items-center gap-2">
-                View All Universities
-                <i data-lucide="arrow-right"
-                  class="transition-transform duration-300 group-hover:translate-x-2 w-4 h-4">
-                </i>
-              </button>
-            </a>
           </div>
         </div>
       </div>
@@ -668,7 +854,128 @@
 
     </script>
 
+
   </main>
+
+  <!-- Live Activity -->
+  <div class="relative px-4 md:px-20">
+
+    <p id="live-activity" class="fixed left-1/2 -translate-x-1/2 bottom-6 z-50 
+           flex items-center gap-2
+           py-2 px-5 rounded-full 
+           bg-white/80 backdrop-blur-xl 
+           shadow-lg border 
+           text-xs text-textPrimary font-semibold 
+           opacity-0 translate-y-5 
+           transition-all duration-500">
+
+      <!-- Green blinking dot -->
+      <span class="relative flex h-2  w-2 ">
+        <span class="absolute inline-flex h-full w-full rounded-full bg-green-500 animate-ping"></span>
+        <span class="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+      </span>
+
+      <!-- Text -->
+      <span id="live-text" class="text-nowrap"></span>
+
+    </p>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const el = document.getElementById("live-activity");
+      const textEl = document.getElementById("live-text");
+
+      if (!el || !textEl) return;
+
+      const messages = [
+        () => `${rand(1200, 2500)}+ transcripts processed successfully`,
+        () => `${rand(5, 25)} students requested documents today`,
+        () => `${rand(1, 10)} applications submitted in last hour`,
+        () => `Documents delivered to ${rand(3, 12)} countries this week`,
+        () => `${rand(20, 60)} verifications completed today`,
+        () => `${rand(2, 15)} transcript requests in progress`,
+        () => `100% secure & confidential handling`,
+        () => `Avg processing time: ${rand(7, 15)} days`
+      ];
+
+      function rand(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function showMessage() {
+        const msg = messages[Math.floor(Math.random() * messages.length)];
+        textEl.innerHTML = msg();
+
+        // show
+        el.classList.remove("opacity-0", "translate-y-5");
+        el.classList.add("opacity-100", "translate-y-0");
+
+        // hide after 3s
+        setTimeout(() => {
+          el.classList.remove("opacity-100", "translate-y-0");
+          el.classList.add("opacity-0", "translate-y-5");
+        }, 3000);
+      }
+
+      showMessage();
+      setInterval(showMessage, 5000);
+
+    });
+  </script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/1234567890" target="_blank"
+    class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition duration-300">
+
+    <!-- WhatsApp Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path
+        d="M20.52 3.48A11.86 11.86 0 0012.06 0C5.46 0 .1 5.36.1 11.96c0 2.11.55 4.17 1.6 6L0 24l6.2-1.63a11.86 11.86 0 005.86 1.5h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.2-1.25-6.2-3.51-8.43zM12.07 21.5h-.01a9.44 9.44 0 01-4.8-1.3l-.35-.2-3.68.97.98-3.59-.23-.37a9.45 9.45 0 01-1.46-5.05c0-5.23 4.25-9.48 9.49-9.48 2.53 0 4.9.99 6.69 2.78a9.39 9.39 0 012.78 6.7c0 5.23-4.25 9.48-9.49 9.48zm5.23-7.13c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.73.94-.89 1.13-.16.19-.32.21-.61.07-.29-.14-1.23-.45-2.35-1.43-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.45.13-.6.13-.13.29-.32.43-.48.14-.16.19-.27.29-.45.1-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.48-.16-.01-.35-.01-.54-.01-.19 0-.49.07-.75.35-.26.29-1 1-1 2.44s1.02 2.83 1.16 3.03c.14.19 2 3.06 4.85 4.29.68.29 1.21.46 1.63.59.68.22 1.3.19 1.79.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33z" />
+    </svg>
+  </a>
+
+  <script>
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const mobileOpen = document.querySelector("[data-mobile-open]");
+    const mobilePanel = document.querySelector("[data-mobile-panel]");
+    const mobileOverlay = document.querySelector("[data-mobile-overlay]");
+    const mobileDrawer = document.querySelector("[data-mobile-drawer]");
+    const mobileCloses = Array.from(document.querySelectorAll("[data-mobile-close]"));
+
+    const openMobile = () => {
+      if (!mobilePanel) return;
+      mobilePanel.classList.remove("hidden");
+      requestAnimationFrame(() => {
+        if (mobileOverlay) mobileOverlay.classList.remove("opacity-0");
+        if (mobileDrawer) mobileDrawer.classList.remove("translate-x-full");
+      });
+      document.body.classList.add("overflow-hidden");
+    };
+
+    const closeMobile = () => {
+      if (!mobilePanel) return;
+      if (mobileOverlay) mobileOverlay.classList.add("opacity-0");
+      if (mobileDrawer) mobileDrawer.classList.add("translate-x-full");
+      document.body.classList.remove("overflow-hidden");
+      window.setTimeout(() => {
+        if (mobilePanel) mobilePanel.classList.add("hidden");
+      }, 300);
+    };
+
+    if (mobileOpen) mobileOpen.addEventListener("click", openMobile);
+    mobileCloses.forEach((btn) => btn.addEventListener("click", closeMobile));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMobile();
+    });
+
+    lucide.createIcons();
+  </script>
+
 
   <footer class="border-t border-slate-200 bg-white">
     <div class="mx-auto max-w-7xl px-4">
@@ -704,10 +1011,10 @@
               <span class="text-sm font-medium text-white/90">International</span>
             </div>
             <div class="px-5 py-5 text-sm leading-8 text-textSecondary">
-              <p class="text-textPrimary text-lg mb-2">TruDocsGlobal - Transcripts</p>
-              <p>Ward No. 28, E/141, 1st Floor, Sec-1,</p>
-              <p>Avanti Vihar, Raipur,</p>
-              <p>Chhattisgarh - 492001</p>
+              <p class="text-textPrimary text-lg mb-2">TruDocsGlobal Private Limited</p>
+              <p>B-17 Platinum, Ashoka Ratan</p>
+              <p>Shankar Nagar, Raipur,</p>
+              <p>Chhattisgarh - 492006</p>
             </div>
           </div>
         </div>
@@ -846,45 +1153,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    const yearEl = document.getElementById("year");
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    const mobileOpen = document.querySelector("[data-mobile-open]");
-    const mobilePanel = document.querySelector("[data-mobile-panel]");
-    const mobileOverlay = document.querySelector("[data-mobile-overlay]");
-    const mobileDrawer = document.querySelector("[data-mobile-drawer]");
-    const mobileCloses = Array.from(document.querySelectorAll("[data-mobile-close]"));
-
-    const openMobile = () => {
-      if (!mobilePanel) return;
-      mobilePanel.classList.remove("hidden");
-      requestAnimationFrame(() => {
-        if (mobileOverlay) mobileOverlay.classList.remove("opacity-0");
-        if (mobileDrawer) mobileDrawer.classList.remove("translate-x-full");
-      });
-      document.body.classList.add("overflow-hidden");
-    };
-
-    const closeMobile = () => {
-      if (!mobilePanel) return;
-      if (mobileOverlay) mobileOverlay.classList.add("opacity-0");
-      if (mobileDrawer) mobileDrawer.classList.add("translate-x-full");
-      document.body.classList.remove("overflow-hidden");
-      window.setTimeout(() => {
-        if (mobilePanel) mobilePanel.classList.add("hidden");
-      }, 300);
-    };
-
-    if (mobileOpen) mobileOpen.addEventListener("click", openMobile);
-    mobileCloses.forEach((btn) => btn.addEventListener("click", closeMobile));
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMobile();
-    });
-
-    lucide.createIcons();
-  </script>
 </body>
 
 </html>

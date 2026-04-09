@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQ's - TruDocsGlobal</title>
+  <title>West University - TruDocsGlobal</title>
   <link rel="icon" href="/public/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -226,8 +226,8 @@
           <div class="relative group">
 
             <!-- Button -->
-            <button type="button" class="inline-flex items-center gap-2 hover:text-goldLight/90">
-              <a href="/university/">UNIVERSITY</a>
+            <button type="button" class="inline-flex items-center gap-2 text-goldLight">
+              <a href="/university">UNIVERSITY</a>
               <i data-lucide="chevron-down"
                 class="w-4 h-4 text-textSecondary transition-transform duration-300 group-hover:rotate-180">
               </i>
@@ -256,7 +256,7 @@
 
           <a class="hover:text-goldLight/90" href="/affiliates">AFFILIATES</a>
           <a class="hover:text-goldLight/90" href="/blogs">BLOGS</a>
-          <a class="text-goldLight" href="/faqs">FAQS</a>
+          <a class="hover:text-goldLight/90" href="/faqs">FAQS</a>
         </nav>
 
         <div class="flex items-center gap-3">
@@ -308,7 +308,7 @@
               <summary
                 class="flex items-center justify-between cursor-pointer list-none px-3 py-2 hover:text-goldLight/90">
 
-                <a href="/services/" class="flex items-center gap-2 hover:text-goldLight/90">
+                <a href="/services" class="flex items-center gap-2 hover:text-goldLight/90">
                   <i data-lucide="briefcase" class="w-4 h-4"></i> SERVICES
                 </a>
 
@@ -408,9 +408,8 @@
             <!-- UNIVERSITY -->
             <details class="group overflow-hidden transition-all duration-300">
 
-              <summary
-                class="flex items-center justify-between cursor-pointer list-none px-3 py-2 hover:text-goldLight/90">
-                <a href="/university/" class="flex items-center gap-2">
+              <summary class="flex items-center justify-between cursor-pointer list-none px-3 py-2 text-goldLight">
+                <a href="/university" class="flex items-center gap-2">
                   <i data-lucide="graduation-cap" class="w-4 h-4"></i> UNIVERSITY
                 </a>
 
@@ -440,7 +439,7 @@
 
             <a class="rounded-xl px-3 py-2 hover:text-goldLight/90" href="/affiliates">AFFILIATES</a>
             <a class="rounded-xl px-3 py-2 hover:text-goldLight/90" href="/blogs">BLOGS</a>
-            <a class="rounded-xl px-3 py-2 text-goldLight" href="/faqs">FAQS</a>
+            <a class="rounded-xl px-3 py-2 hover:text-goldLight/90" href="/faqs">FAQS</a>
 
           </div>
         </div>
@@ -459,371 +458,333 @@
     </div>
   </header>
 
-  <main class="bg-[url('/assets/main_bg.png')] bg-cover bg-center bg-fixed bg-white/90 bg-blend-lighten">
-    <!-- Heading -->
+<main class="bg-[url('/assets/main_bg.png')] bg-cover bg-center bg-fixed bg-white/90 bg-blend-lighten">
+    <!-- HERO SECTION -->
     <section class="relative py-12 md:py-20 bg-slate-50 text-white">
 
-      <!-- Overlay -->
-      <div class="absolute inset-0 bg-[url('/assets/images/faqs.png')] bg-cover bg-center brightness-50"></div>
+      <!-- Background -->
+      <div class="absolute inset-0 bg-[url('/assets/images/university.png')] bg-cover bg-center brightness-50"></div>
 
-      <div class="relative max-w-6xl mx-auto px-4 flex flex-col items-center">
+      <!-- Content -->
+      <div class="relative max-w-5xl mx-auto px-4 flex flex-col items-center">
 
         <!-- Heading -->
         <div class="text-center">
-          <p class="uppercase tracking-widest text-sm text-orange-500">Frequently Asked Questions</p>
-          <h2 class="text-3xl md:text-5xl mt-2">
-            Everything you need to know about transcripts, processing, and delivery.
+          <p class="uppercase tracking-widest text-sm text-orange-500">
+            Universities
+          </p>
+          <h2 class="text-3xl md:text-5xl mt-2 leading-tight">
+            Connecting You with Trusted Universities for Seamless Documentation
           </h2>
         </div>
       </div>
     </section>
 
-    <!-- FAQ's -->
-    <section class="relative py-12 md:py-20">
+    <!-- All University Area Wise -->
+    <section class="max-w-7xl mx-auto px-4 py-12 md:py-20">
 
-      <!-- Heading -->
-      <div class="text-center mb-12 px-4 text-textPrimary">
-        <p class="uppercase tracking-widest text-sm text-orange-500">Frequently Asked Questions</p>
-        <h2 class="text-3xl md:text-4xl max-w-4xl mx-auto mt-2">
-          Everything you need to know about transcripts, processing, and delivery.
+      <div class="mb-10 w-full max-w-xl mx-auto">
+        <p class="text-orange-500 text-sm text-center uppercase tracking-widest">
+          Explore by Region
+        </p>
+
+        <h2 class="mt-2 text-3xl md:text-4xl text-center text-textPrimary leading-tight md:leading-snug">
+          Find West University
         </h2>
+
+        <!-- SEARCH -->
+        <input id="searchInput" type="text" placeholder="Search university..."
+          class="mt-8 w-full px-5 py-3 text-sm rounded-xl border outline-none focus:border-gray-300">
       </div>
 
-      <!-- FAQ Container -->
-      <div class="mt-12 max-w-3xl mx-auto space-y-4 px-4">
+      <!-- CONTENT -->
+      <div id="universityContainer" class="space-y-14"></div>
 
-        <!-- Item -->
-        <div
-          class="faq-item bg-slate-50/20 hover:bg-white backdrop-blur-sm border rounded-xl hover:shadow-sm transition">
-
-          <button
-            class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left font-medium text-textPrimary">
-            <p class="line-clamp-1 hover:line-clamp-none">How can I request my academic transcript?</p>
-            <i data-lucide="plus" class="faq-icon w-5 h-5 text-primaryLight transition-all duration-300"></i>
-          </button>
-
-          <div class="faq-content px-6 text-sm text-textSecondary max-h-0 overflow-hidden transition-all duration-500">
-            <p class="pb-5">
-              You can easily request your transcript by filling out our online form. Simply provide your academic
-              details, upload required documents, and submit your request. Our team will handle the rest.
-            </p>
-          </div>
-        </div>
-
-        <!-- Item -->
-        <div
-          class="faq-item bg-slate-50/20 hover:bg-white backdrop-blur-sm border rounded-xl hover:shadow-sm transition">
-          <button
-            class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left font-medium text-textPrimary">
-            <p class="line-clamp-1 hover:line-clamp-none">How long does transcript processing take?</p>
-            <i data-lucide="plus" class="faq-icon w-5 h-5 text-primaryLight transition-all duration-300"></i>
-          </button>
-          <div class="faq-content px-6 text-sm text-textSecondary max-h-0 overflow-hidden transition-all duration-500">
-            <p class="pb-5">
-              Processing usually takes 5–15 working days depending on your university. We also offer express processing
-              for selected institutions.
-            </p>
-          </div>
-        </div>
-
-        <!-- Item -->
-        <div
-          class="faq-item bg-slate-50/20 hover:bg-white backdrop-blur-sm border rounded-xl hover:shadow-sm transition">
-          <button
-            class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left font-medium text-textPrimary">
-            <p class="line-clamp-1 hover:line-clamp-none">
-              Do you provide international transcript delivery?
-            </p>
-            <i data-lucide="plus" class="faq-icon w-5 h-5 text-primaryLight transition-all duration-300"></i>
-          </button>
-          <div class="faq-content px-6 text-sm text-textSecondary max-h-0 overflow-hidden transition-all duration-500">
-            <p class="pb-5">
-              Yes, we deliver transcripts worldwide via trusted courier services like DHL, FedEx, and Speed Post with
-              full tracking support.
-            </p>
-          </div>
-        </div>
-
-        <!-- Item -->
-        <div
-          class="faq-item bg-slate-50/20 hover:bg-white backdrop-blur-sm border rounded-xl hover:shadow-sm transition">
-          <button
-            class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left font-medium text-textPrimary">
-            <p class="line-clamp-1 hover:line-clamp-none">
-              Is my data secure with your platform?
-            </p>
-            <i data-lucide="plus" class="faq-icon w-5 h-5 text-primaryLight transition-all duration-300"></i>
-          </button>
-          <div class="faq-content px-6 text-sm text-textSecondary max-h-0 overflow-hidden transition-all duration-500">
-            <p class="pb-5">
-              Absolutely. We use secure encryption and strict privacy policies to ensure your personal and academic
-              information remains safe.
-            </p>
-          </div>
-        </div>
-
-        <!-- Item -->
-        <div
-          class="faq-item bg-slate-50/20 hover:bg-white backdrop-blur-sm border rounded-xl hover:shadow-sm transition">
-          <button
-            class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left font-medium text-textPrimary">
-            <p class="line-clamp-1 hover:line-clamp-none">
-              Can I track my transcript request?
-            </p>
-            <i data-lucide="plus" class="faq-icon w-5 h-5 text-primaryLight transition-all duration-300"></i>
-          </button>
-          <div class="faq-content px-6 text-sm text-textSecondary max-h-0 overflow-hidden transition-all duration-500">
-            <p class="pb-5">
-              Yes, once your request is submitted, you will receive real-time updates and tracking information via email
-              and dashboard.
-            </p>
-          </div>
-        </div>
-
-      </div>
     </section>
+
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const items = document.querySelectorAll(".faq-item");
+      document.addEventListener("DOMContentLoaded", function () {
 
-        items.forEach(item => {
-          const btn = item.querySelector(".faq-btn");
-          const content = item.querySelector(".faq-content");
-          const icon = item.querySelector(".faq-icon");
+        const data = {
+          "West University": [
+            {
+              name: "University of Mumbai", img: "/assets/images/universities/west/mu.png", link: "/universities/mumbai"
+            },
 
-          btn.addEventListener("click", () => {
-            const isOpen = content.style.maxHeight;
+          ],
 
-            // Close all
-            document.querySelectorAll(".faq-content").forEach(c => {
-              c.style.maxHeight = null;
-              c.classList.remove("border-t", "pt-2");
+        };
+
+        const container = document.getElementById("universityContainer");
+        const searchInput = document.getElementById("searchInput");
+
+        if (!container || !searchInput) {
+          console.error("Container or SearchInput not found");
+          return;
+        }
+
+        function render(searchText = "") {
+          container.innerHTML = "";
+          let hasResults = false;
+
+          Object.keys(data).forEach(category => {
+
+            const filtered = data[category].filter(u =>
+              u.name.toLowerCase().includes(searchText.toLowerCase())
+            );
+
+            if (filtered.length === 0) return;
+
+            hasResults = true;
+
+            let cards = "";
+
+            filtered.forEach(u => {
+              cards += `
+          <a href="${u.link}"
+            class="group bg-white rounded-xl p-3 text-center shadow hover:shadow-md transition block">
+
+            <img src="${u.img}"
+              class="h-16 mx-auto object-contain mb-2"
+              onerror="this.style.display='none'">
+
+            <p class="text-xs text-gray-700">
+              ${u.name}
+            </p>
+
+            <div class="mt-2 bg-goldLight text-xs px-3 py-1 rounded-md inline-block">
+              View Details
+            </div>  
+
+          </a>
+        `;
             });
 
-            document.querySelectorAll(".faq-icon").forEach(i => {
-              i.classList.remove("rotate-45");
-            });
+            const section = document.createElement("div");
 
-            // Open clicked
-            if (!isOpen) {
-              content.style.maxHeight = content.scrollHeight + "px";
-              content.classList.add("border-t", "pt-2");
-              icon.classList.add("rotate-45");
-            }
+            section.innerHTML = `
+
+        <div class="bg-primaryLight p-6 rounded-2xl">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            ${cards}
+          </div>
+        </div>
+      `;
+
+            container.appendChild(section);
           });
+
+          // no results
+          if (!hasResults) {
+            container.innerHTML = `
+        <div class="text-center py-16">
+          <h3 class="text-lg font-semibold">No University Found</h3>
+          <p class="text-sm text-gray-500 mt-2">Try another search</p>
+        </div>
+      `;
+          }
+        }
+
+        // IMPORTANT
+        render("");
+
+        searchInput.addEventListener("input", function (e) {
+          render(e.target.value);
         });
+
       });
     </script>
 
-    <!-- Our Testimonials -->
-    <section class="pb-12 md:pb-20 text-center">
+    <!-- STATS -->
+    <section class="px-4 max-w-4xl mx-auto text-center">
 
-      <!-- Heading -->
-      <div class="text-center mb-12 text-textPrimary">
-        <p class="uppercase tracking-widest text-sm text-orange-500">Our testimonials.</p>
-        <h2 class="text-3xl md:text-4xl max-w-4xl mx-auto mt-3">
-          What Do Our Happy Clients Say About Us?
-        </h2>
-      </div>
+      <p class="text-orange-500 text-sm uppercase tracking-widest">
+        CREDIBILITY INDEX
+      </p>
 
-      <!-- Slider -->
-      <div class="px-4 max-w-7xl mx-auto relative overflow-hidden">
+      <h2 class="mt-2 text-3xl md:text-4xl text-textPrimary leading-tight md:leading-snug">
+        Our proven track record
+      </h2>
 
-        <!-- Track -->
-        <div id="testimonialTrack1" class="flex transition-transform duration-700 ease-in-out gap-4 mx-4">
+      <!-- COUNTERS -->
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
 
-          <!-- CARD 1 -->
-          <div class="min-w-full md:min-w-[33.33%] bg-white rounded-2xl shadow-lg p-6 pb-12 relative">
-            <div class="absolute top-4 right-4 text-goldLight text-lg">★ ★ ★ ★ ★</div>
-
-            <div class="flex items-center gap-4 mb-4">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-14 h-14 rounded-full object-cover" />
-              <div class="flex flex-col items-start">
-                <h3 class="text-sm font-semibold text-textPrimary">Alex Morgan</h3>
-                <p class="text-xs text-textSecondary">New York, USA</p>
-              </div>
-            </div>
-
-            <p class="text-textSecondary leading-relaxed text-xs">
-              Absolutely impressed with the professionalism and efficiency of the team.
-              They handled my documentation seamlessly and ensured everything was completed
-              on time. The communication throughout the process was clear and reassuring.
-            </p>
-
-            <div class="absolute -bottom-14 left-4 text-goldLight text-9xl opacity-20">“</div>
-          </div>
-
-          <!-- CARD 2 -->
-          <div class="min-w-full md:min-w-[33.33%] bg-white rounded-2xl shadow-lg p-6 pb-12 relative">
-            <div class="absolute top-4 right-4 text-goldLight text-lg">★ ★ ★ ★ ★</div>
-
-            <div class="flex items-center gap-4 mb-4">
-              <img src="https://randomuser.me/api/portraits/women/65.jpg" class="w-14 h-14 rounded-full object-cover" />
-              <div class="flex flex-col items-start">
-                <h3 class="text-sm font-semibold text-textPrimary">Sophie Laurent</h3>
-                <p class="text-xs text-textSecondary">Paris, France</p>
-              </div>
-            </div>
-
-            <p class="text-textSecondary leading-relaxed text-xs">
-              I had an amazing experience working with this team. They were incredibly
-              responsive and paid attention to every small detail. It made the entire
-              process smooth and stress-free for me.
-            </p>
-
-            <div class="absolute -bottom-14 left-4 text-goldLight text-9xl opacity-20">“</div>
-          </div>
-
-          <!-- CARD 3 -->
-          <div class="min-w-full md:min-w-[33.33%] bg-white rounded-2xl shadow-lg p-6 pb-12 relative">
-            <div class="absolute top-4 right-4 text-goldLight text-lg">★ ★ ★ ★ ★</div>
-
-            <div class="flex items-center gap-4 mb-4">
-              <img src="https://randomuser.me/api/portraits/men/76.jpg" class="w-14 h-14 rounded-full object-cover" />
-              <div class="flex flex-col items-start">
-                <h3 class="text-sm font-semibold text-textPrimary">Liam O’Connor</h3>
-                <p class="text-xs text-textSecondary">Dublin, Ireland</p>
-              </div>
-            </div>
-
-            <p class="text-textSecondary leading-relaxed text-xs">
-              Their service exceeded my expectations. Fast turnaround, accurate work,
-              and very friendly support. I’ll definitely be using their services again
-              in the future.
-            </p>
-
-            <div class="absolute -bottom-14 left-4 text-goldLight text-9xl opacity-20">“</div>
-          </div>
-
-          <!-- CARD 4 -->
-          <div class="min-w-full md:min-w-[33.33%] bg-white rounded-2xl shadow-lg p-6 pb-12 relative">
-            <div class="absolute top-4 right-4 text-goldLight text-lg">★ ★ ★ ★ ★</div>
-
-            <div class="flex items-center gap-4 mb-4">
-              <img src="https://randomuser.me/api/portraits/women/12.jpg" class="w-14 h-14 rounded-full object-cover" />
-              <div class="flex flex-col items-start">
-                <h3 class="text-sm font-semibold text-textPrimary">Maya Kapoor</h3>
-                <p class="text-xs text-textSecondary">Mumbai, India</p>
-              </div>
-            </div>
-
-            <p class="text-textSecondary leading-relaxed text-xs">
-              From start to finish, everything was handled perfectly. The team was
-              supportive, quick, and extremely professional. Highly recommended for
-              anyone looking for reliable services.
-            </p>
-
-            <div class="absolute -bottom-14 left-4 text-goldLight text-9xl opacity-20">“</div>
-          </div>
-
+        <div class="group px-6 py-4 rounded-2xl border border-blue-400 bg-white">
+          <h3 class="text-2xl font-bold text-textPrimary counter group-hover:scale-105 transition duration-300"
+            data-target="1050">0+</h3>
+          <p class="text-xs text-textSecondary mt-1">Universities We Serve</p>
         </div>
 
-        <!-- Dots -->
-        <div id="testimonialDots1" class="flex justify-center gap-2 mt-8"></div>
+        <div class="group px-6 py-4 rounded-2xl border border-blue-400 bg-white">
+          <h3 class="text-2xl font-bold text-textPrimary counter group-hover:scale-105 transition duration-300"
+            data-target="58000">0+</h3>
+          <p class="text-xs text-textSecondary mt-1">Users Trust Us</p>
+        </div>
+
+        <div class="group px-6 py-4 rounded-2xl border border-red-400 bg-white">
+          <h3 class="text-2xl font-bold text-red-500 counter group-hover:scale-105 transition duration-300"
+            data-target="45875">0+</h3>
+          <p class="text-xs text-textSecondary mt-1">Transcripts Delivered</p>
+        </div>
+
+        <div class="group px-6 py-4 rounded-2xl border border-blue-400 bg-white">
+          <h3 class="text-2xl font-bold text-textPrimary counter group-hover:scale-105 transition duration-300"
+            data-target="81000">0+</h3>
+          <p class="text-xs text-textSecondary mt-1">Documents Procured</p>
+        </div>
 
       </div>
-
     </section>
+
+    <!-- Banner All UNIVERSITIES -->
+    <section class="max-w-7xl mx-auto px-4 py-12 md:py-20 ">
+
+      <div class="relative rounded-2xl overflow-hidden">
+
+        <!-- BG -->
+        <div class="absolute inset-0 bg-[url('/assets/main_bg.png')] bg-cover brightness-75">
+        </div>
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-primaryLight/90 via-primaryLight/80 to-cyan-700/80"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center text-white py-12">
+
+          <p class="text-orange-500 text-sm uppercase tracking-widest px-4">
+            Our Serving Universities
+          </p>
+
+          <h2 class="mt-2 px-4 text-3xl md:text-4xl max-w-2xl mx-auto text-white leading-tight md:leading-snug">
+            Get Your Academic Transcripts From Over 850 Indian Universities
+          </h2>
+
+          <!-- SLIDER -->
+          <div class="university-slider mt-10 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth 
+        [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+
+            <!-- CARD -->
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center ml-4">
+              <img src="/assets/images/universities/north/ignou.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">IGNOU</p>
+            </div>
+
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/north/pu.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">Panjab University</p>
+            </div>
+
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/north/bhu.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">BHU, Varanasi</p>
+            </div>
+
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/central/barkatullah.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">Barkatullah University, Bhopal</p>
+            </div>
+
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/north/jivaji.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">Jiwaji University, Gwalior</p>
+            </div>
+
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/north/mdu.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">Maharshi Dayanand University</p>
+            </div>
+
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/north/gju.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">Guru Jambheshwar University</p>
+            </div>
+
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/west/mu.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">University of Mumbai</p>
+            </div>
+
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm">
+              <img src="/assets/images/universities/central/davv.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">DAVV, Indore</p>
+            </div>
+
+            <div class="w-[180px] snap-center flex-shrink-0 bg-white rounded-xl p-4 text-center shadow-sm mr-4">
+              <img src="/assets/images/universities/north/du.png" class="h-20 mx-auto object-contain">
+              <p class="text-xs text-textPrimary mt-3">University of Delhi</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script>
-      (function () {
 
-        const track = document.getElementById("testimonialTrack1");
-        const dots = document.getElementById("testimonialDots1");
+      /* COUNTER ANIMATION */
+      const counters = document.querySelectorAll('.counter');
 
-        let originalItems = Array.from(track.children);
+      const animateCounters = () => {
+        counters.forEach(counter => {
+          const target = +counter.getAttribute('data-target');
+          let count = 0;
 
-        // Clone for infinite loop
-        originalItems.forEach(item => {
-          const clone = item.cloneNode(true);
-          track.appendChild(clone);
-        });
+          const update = () => {
+            const increment = target / 100;
 
-        let index = 0;
-        let itemsPerView = window.innerWidth >= 768 ? 3 : 1;
-        const totalOriginal = originalItems.length;
-
-        let timer;
-
-        // Create dots
-        function createDots() {
-          dots.innerHTML = "";
-
-          for (let i = 0; i < totalOriginal; i++) {
-            const dot = document.createElement("button");
-            dot.className = "w-2 h-2 rounded-full bg-gray-300";
-
-            dot.addEventListener("click", () => {
-              index = i;
-              updateSlider();
-              restartAuto();
-            });
-
-            dots.appendChild(dot);
-          }
-        }
-
-        function updateSlider() {
-          const move = index * (100 / itemsPerView);
-          track.style.transform = `translateX(-${move}%)`;
-
-          const dotItems = dots.children;
-          const activeIndex = index % totalOriginal; // 🔥 FIX
-
-          for (let i = 0; i < dotItems.length; i++) {
-            dotItems[i].classList.remove("bg-orange-500");
-            dotItems[i].classList.add("bg-gray-300");
-          }
-
-          if (dotItems[activeIndex]) {
-            dotItems[activeIndex].classList.remove("bg-gray-300");
-            dotItems[activeIndex].classList.add("bg-orange-500");
-          }
-        }
-
-        // Infinite auto slide
-        function startAuto() {
-          timer = setInterval(() => {
-            index++;
-            updateSlider();
-
-            // reset smoothly
-            if (index >= totalOriginal) {
-              setTimeout(() => {
-                track.style.transition = "none";
-                index = 0;
-                updateSlider();
-
-                setTimeout(() => {
-                  track.style.transition = "transform 0.7s ease-in-out";
-                }, 50);
-              }, 700);
+            if (count < target) {
+              count += increment;
+              counter.innerText = Math.floor(count).toLocaleString() + "+";
+              requestAnimationFrame(update);
+            } else {
+              counter.innerText = target.toLocaleString() + "+";
             }
+          };
 
-          }, 3000);
-        }
-
-        function restartAuto() {
-          clearInterval(timer);
-          startAuto();
-        }
-
-        window.addEventListener("resize", () => {
-          itemsPerView = window.innerWidth >= 768 ? 3 : 1;
-          index = 0;
-          updateSlider();
+          update();
         });
+      };
 
-        // Init
-        createDots();
-        updateSlider();
-        startAuto();
+      const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          animateCounters();
+          observer.disconnect();
+        }
+      });
 
-      })();
+      observer.observe(document.querySelector('.counter'));
+
+
+      /* AUTO SLIDER */
+      const universitySlider = document.querySelector('.university-slider');
+      let autoSlide;
+
+      function startAutoSlide() {
+        autoSlide = setInterval(() => {
+          if (universitySlider.scrollLeft + universitySlider.clientWidth >= universitySlider.scrollWidth - 5) {
+            universitySlider.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            universitySlider.scrollBy({ left: 200, behavior: 'smooth' });
+          }
+        }, 2000);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(autoSlide);
+      }
+
+      startAutoSlide();
+
+      universitySlider.addEventListener('mouseenter', stopAutoSlide);
+      universitySlider.addEventListener('mouseleave', startAutoSlide);
+
     </script>
+
 
   </main>
 
- <!-- Live Activity -->
+  
+  <!-- Live Activity -->
   <div class="relative px-4 md:px-20">
 
     <p id="live-activity" class="fixed left-1/2 -translate-x-1/2 bottom-6 z-50 
@@ -902,6 +863,46 @@
         d="M20.52 3.48A11.86 11.86 0 0012.06 0C5.46 0 .1 5.36.1 11.96c0 2.11.55 4.17 1.6 6L0 24l6.2-1.63a11.86 11.86 0 005.86 1.5h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.2-1.25-6.2-3.51-8.43zM12.07 21.5h-.01a9.44 9.44 0 01-4.8-1.3l-.35-.2-3.68.97.98-3.59-.23-.37a9.45 9.45 0 01-1.46-5.05c0-5.23 4.25-9.48 9.49-9.48 2.53 0 4.9.99 6.69 2.78a9.39 9.39 0 012.78 6.7c0 5.23-4.25 9.48-9.49 9.48zm5.23-7.13c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.73.94-.89 1.13-.16.19-.32.21-.61.07-.29-.14-1.23-.45-2.35-1.43-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.45.13-.6.13-.13.29-.32.43-.48.14-.16.19-.27.29-.45.1-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.48-.16-.01-.35-.01-.54-.01-.19 0-.49.07-.75.35-.26.29-1 1-1 2.44s1.02 2.83 1.16 3.03c.14.19 2 3.06 4.85 4.29.68.29 1.21.46 1.63.59.68.22 1.3.19 1.79.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33z" />
     </svg>
   </a>
+
+  <script>
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const mobileOpen = document.querySelector("[data-mobile-open]");
+    const mobilePanel = document.querySelector("[data-mobile-panel]");
+    const mobileOverlay = document.querySelector("[data-mobile-overlay]");
+    const mobileDrawer = document.querySelector("[data-mobile-drawer]");
+    const mobileCloses = Array.from(document.querySelectorAll("[data-mobile-close]"));
+
+    const openMobile = () => {
+      if (!mobilePanel) return;
+      mobilePanel.classList.remove("hidden");
+      requestAnimationFrame(() => {
+        if (mobileOverlay) mobileOverlay.classList.remove("opacity-0");
+        if (mobileDrawer) mobileDrawer.classList.remove("translate-x-full");
+      });
+      document.body.classList.add("overflow-hidden");
+    };
+
+    const closeMobile = () => {
+      if (!mobilePanel) return;
+      if (mobileOverlay) mobileOverlay.classList.add("opacity-0");
+      if (mobileDrawer) mobileDrawer.classList.add("translate-x-full");
+      document.body.classList.remove("overflow-hidden");
+      window.setTimeout(() => {
+        if (mobilePanel) mobilePanel.classList.add("hidden");
+      }, 300);
+    };
+
+    if (mobileOpen) mobileOpen.addEventListener("click", openMobile);
+    mobileCloses.forEach((btn) => btn.addEventListener("click", closeMobile));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMobile();
+    });
+
+    lucide.createIcons();
+  </script>
+
 
   <footer class="border-t border-slate-200 bg-white">
     <div class="mx-auto max-w-7xl px-4">
@@ -1079,45 +1080,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    const yearEl = document.getElementById("year");
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    const mobileOpen = document.querySelector("[data-mobile-open]");
-    const mobilePanel = document.querySelector("[data-mobile-panel]");
-    const mobileOverlay = document.querySelector("[data-mobile-overlay]");
-    const mobileDrawer = document.querySelector("[data-mobile-drawer]");
-    const mobileCloses = Array.from(document.querySelectorAll("[data-mobile-close]"));
-
-    const openMobile = () => {
-      if (!mobilePanel) return;
-      mobilePanel.classList.remove("hidden");
-      requestAnimationFrame(() => {
-        if (mobileOverlay) mobileOverlay.classList.remove("opacity-0");
-        if (mobileDrawer) mobileDrawer.classList.remove("translate-x-full");
-      });
-      document.body.classList.add("overflow-hidden");
-    };
-
-    const closeMobile = () => {
-      if (!mobilePanel) return;
-      if (mobileOverlay) mobileOverlay.classList.add("opacity-0");
-      if (mobileDrawer) mobileDrawer.classList.add("translate-x-full");
-      document.body.classList.remove("overflow-hidden");
-      window.setTimeout(() => {
-        if (mobilePanel) mobilePanel.classList.add("hidden");
-      }, 300);
-    };
-
-    if (mobileOpen) mobileOpen.addEventListener("click", openMobile);
-    mobileCloses.forEach((btn) => btn.addEventListener("click", closeMobile));
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMobile();
-    });
-
-    lucide.createIcons();
-  </script>
 </body>
 
 </html>
