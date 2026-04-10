@@ -72,8 +72,9 @@
 
         <!-- Left Side -->
         <div class="flex flex-wrap items-center gap-x-6 gap-y-1 text-xs">
-          <a href="tel:+918305737740" class="inline-flex items-center gap-2 hover:text-brand-200">
-            <span class="font-semibold">Call:</span>
+          <a href="https://wa.me/918305737740?text=Hi%20I%20need%20help%20with%20transcript%20services" target="_blank"
+            class="inline-flex items-center gap-2 hover:text-brand-200">
+            <span class="font-semibold">WhatsApp:</span>
             <span>+91 8305737740</span>
           </a>
           <a href="mailto:support@trudocsglobal.com" class="inline-flex items-center gap-2 hover:text-brand-200">
@@ -854,55 +855,38 @@
   </script>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/1234567890" target="_blank"
-    class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition duration-300">
+  <a href="https://wa.me/918305737740?text=Hi%20I%20need%20help%20with%20transcript%20services" target="_blank"
+    class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white p-1 rounded-full shadow-lg transition duration-300 animate-pulse-custom">
 
     <!-- WhatsApp Icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-      <path
-        d="M20.52 3.48A11.86 11.86 0 0012.06 0C5.46 0 .1 5.36.1 11.96c0 2.11.55 4.17 1.6 6L0 24l6.2-1.63a11.86 11.86 0 005.86 1.5h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.2-1.25-6.2-3.51-8.43zM12.07 21.5h-.01a9.44 9.44 0 01-4.8-1.3l-.35-.2-3.68.97.98-3.59-.23-.37a9.45 9.45 0 01-1.46-5.05c0-5.23 4.25-9.48 9.49-9.48 2.53 0 4.9.99 6.69 2.78a9.39 9.39 0 012.78 6.7c0 5.23-4.25 9.48-9.49 9.48zm5.23-7.13c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.73.94-.89 1.13-.16.19-.32.21-.61.07-.29-.14-1.23-.45-2.35-1.43-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.45.13-.6.13-.13.29-.32.43-.48.14-.16.19-.27.29-.45.1-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.48-.16-.01-.35-.01-.54-.01-.19 0-.49.07-.75.35-.26.29-1 1-1 2.44s1.02 2.83 1.16 3.03c.14.19 2 3.06 4.85 4.29.68.29 1.21.46 1.63.59.68.22 1.3.19 1.79.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33z" />
-    </svg>
+    <span class="grid h-10 w-10 place-items-center rounded-full">
+      <i class="fa-brands fa-whatsapp text-xl"></i>
+    </span>
   </a>
 
-  <script>
-    const yearEl = document.getElementById("year");
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  <!-- Custom Animation -->
+  <style>
+    @keyframes pulseCustom {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+      }
 
-    const mobileOpen = document.querySelector("[data-mobile-open]");
-    const mobilePanel = document.querySelector("[data-mobile-panel]");
-    const mobileOverlay = document.querySelector("[data-mobile-overlay]");
-    const mobileDrawer = document.querySelector("[data-mobile-drawer]");
-    const mobileCloses = Array.from(document.querySelectorAll("[data-mobile-close]"));
+      70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 15px rgba(34, 197, 94, 0);
+      }
 
-    const openMobile = () => {
-      if (!mobilePanel) return;
-      mobilePanel.classList.remove("hidden");
-      requestAnimationFrame(() => {
-        if (mobileOverlay) mobileOverlay.classList.remove("opacity-0");
-        if (mobileDrawer) mobileDrawer.classList.remove("translate-x-full");
-      });
-      document.body.classList.add("overflow-hidden");
-    };
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+      }
+    }
 
-    const closeMobile = () => {
-      if (!mobilePanel) return;
-      if (mobileOverlay) mobileOverlay.classList.add("opacity-0");
-      if (mobileDrawer) mobileDrawer.classList.add("translate-x-full");
-      document.body.classList.remove("overflow-hidden");
-      window.setTimeout(() => {
-        if (mobilePanel) mobilePanel.classList.add("hidden");
-      }, 300);
-    };
-
-    if (mobileOpen) mobileOpen.addEventListener("click", openMobile);
-    mobileCloses.forEach((btn) => btn.addEventListener("click", closeMobile));
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMobile();
-    });
-
-    lucide.createIcons();
-  </script>
-
+    .animate-pulse-custom {
+      animation: pulseCustom 1.8s infinite;
+    }
+  </style>
 
   <footer class="border-t border-slate-200 bg-white">
     <div class="mx-auto max-w-7xl px-4">
@@ -911,16 +895,20 @@
           <div>
             <img src="/assets/logo.png" alt="Worldwide Transcripts" class="h-14 md:h-20 w-auto" />
             <p class="mt-6 max-w-md text-sm leading-7 text-textSecondary">
-              With 15+ years of expertise, Worldwide Transcripts delivers academic documents from Indian university to
-              affiliated ECA bodies. We also offer MEA apostille attestation and translation services.
+              With 12+ years of expertise, TruDocs global simplifies the process of securing academic documents from
+              Indian universities and delivering them to ECA bodies, along with MEA apostille, attestation, and
+              translation services.
             </p>
           </div>
 
           <div class="space-y-3 text-sm text-textSecondary">
-            <a href="tel:+918305737740" class="flex items-center gap-3 transition hover:text-primaryLight">
-              <span class="grid h-10 w-10 place-items-center rounded-full bg-sky-50 text-primaryLight">
-                <i data-lucide="phone" class="h-4 w-4"></i>
+            <a href="https://wa.me/918305737740?text=Hello%20I%20want%20to%20know%20more%20about%20your%20services"
+              target="_blank" class="flex items-center gap-3 transition hover:text-green-500">
+
+              <span class="grid h-10 w-10 place-items-center rounded-full bg-green-50 text-green-600">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
               </span>
+
               <span>+91 8305737740</span>
             </a>
             <a href="mailto:support@trudocsglobal.com"
@@ -1080,6 +1068,46 @@
       </div>
     </div>
   </footer>
+  
+  <script>
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const mobileOpen = document.querySelector("[data-mobile-open]");
+    const mobilePanel = document.querySelector("[data-mobile-panel]");
+    const mobileOverlay = document.querySelector("[data-mobile-overlay]");
+    const mobileDrawer = document.querySelector("[data-mobile-drawer]");
+    const mobileCloses = Array.from(document.querySelectorAll("[data-mobile-close]"));
+
+    const openMobile = () => {
+      if (!mobilePanel) return;
+      mobilePanel.classList.remove("hidden");
+      requestAnimationFrame(() => {
+        if (mobileOverlay) mobileOverlay.classList.remove("opacity-0");
+        if (mobileDrawer) mobileDrawer.classList.remove("translate-x-full");
+      });
+      document.body.classList.add("overflow-hidden");
+    };
+
+    const closeMobile = () => {
+      if (!mobilePanel) return;
+      if (mobileOverlay) mobileOverlay.classList.add("opacity-0");
+      if (mobileDrawer) mobileDrawer.classList.add("translate-x-full");
+      document.body.classList.remove("overflow-hidden");
+      window.setTimeout(() => {
+        if (mobilePanel) mobilePanel.classList.add("hidden");
+      }, 300);
+    };
+
+    if (mobileOpen) mobileOpen.addEventListener("click", openMobile);
+    mobileCloses.forEach((btn) => btn.addEventListener("click", closeMobile));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMobile();
+    });
+
+    lucide.createIcons();
+  </script>
+  
 </body>
 
 </html>
