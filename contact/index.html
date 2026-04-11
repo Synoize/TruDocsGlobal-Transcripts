@@ -559,10 +559,8 @@
       const submit = document.getElementById("submit");
       const status = document.getElementById("status");
 
-      const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwvvZIiMZEKuGj9X4gu3rI6VX6hELpS0pBFRg_7XkZLMn56YYNEBAjTnh1vhGSLJM9aJg/exec";
-
-      // PASTE YOUR SCRIPT URL
-      const scriptURL = WEB_APP_URL;
+      const scriptURL1 = "https://script.google.com/macros/s/AKfycbwvvZIiMZEKuGj9X4gu3rI6VX6hELpS0pBFRg_7XkZLMn56YYNEBAjTnh1vhGSLJM9aJg/exec";
+      const scriptURL2 = "https://script.google.com/macros/s/AKfycby5GfQFUmtveuDcTMPq1i1E35-RNt2zQmk2D2kb0WQY7SVCpcguAQWBT1JR9g9Ct5fh/exec";
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -580,19 +578,27 @@
         };
 
         try {
-          const res = await fetch(scriptURL, {
-            method: "POST",
-            body: JSON.stringify(data)
-          });
+          // 🔥 Send to both sheets in parallel
+          const [res1, res2] = await Promise.all([
+            fetch(scriptURL1, {
+              method: "POST",
+              body: JSON.stringify(data),
+            }),
+            fetch(scriptURL2, {
+              method: "POST",
+              body: JSON.stringify(data),
+            })
+          ]);
 
-          const result = await res.json();
+          const result1 = await res1.json();
+          const result2 = await res2.json();
 
-          if (result.status === "success") {
+          if (result1.status === "success" && result2.status === "success") {
             status.innerText = "Submitted Successfully!";
             submit.innerText = "Submitted";
             form.reset();
           } else {
-            status.innerText = "Failed to submit";
+            status.innerText = "Saved partially (check backup)";
             submit.innerText = "Submit Now";
           }
 
@@ -608,7 +614,7 @@
     </script>
   </main>
 
- <!-- Live Activity -->
+  <!-- Live Activity -->
   <div class="relative px-4 md:px-20">
 
     <p id="live-activity" class="fixed left-1/2 -translate-x-1/2 bottom-6 z-50 
